@@ -1,0 +1,18 @@
+sequenceDiagram
+  participant client
+  participant server
+
+  client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+  server-->>client: HTML document.
+
+  client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+  server-->>client: CSS file
+
+  client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+  server-->>client: JS spa file.
+
+  Note right of client: browser runs spa.js and retrieves JSON data
+
+  server-->>client: notes data
+
+  note right of client: executes callback function to render notes
