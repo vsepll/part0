@@ -1,11 +1,10 @@
 sequenceDiagram
-  participant user
   participant client
   participant server
 
-  user-->>client: Inputs text in form and clicks save.
+note right of client: user inputs text in a html form and clicks "save"
   client-->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note DATA:new_note
-
+  
   client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
   server-->>client: HTML document
 
@@ -15,9 +14,9 @@ sequenceDiagram
   client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
   server-->>client: the JS file
 
-  Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+  Note right of client: The browser starts executing the JavaScript code that fetches the JSON from the server
 
   client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
   server-->>client: updated data
 
-  Note right of browser: The browser executes the callback function that renders the notes
+  Note right of client: The browser executes the callback function that renders the notes
