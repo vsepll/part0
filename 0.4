@@ -15,9 +15,9 @@ sequenceDiagram
   client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
   server-->>client: the JS file
 
-  Note right of the browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+  Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
 
   client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
   server-->>client: updated data
 
-  Note right of the browser: The browser executes the callback function that renders the notes
+  Note right of browser: The browser executes the callback function that renders the notes
