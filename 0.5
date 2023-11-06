@@ -13,6 +13,7 @@ sequenceDiagram
 
   Note right of client: browser runs spa.js and retrieves JSON data
 
+  client-->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
   server-->>client: data.js
 
   note right of client: executes callback function to render notes
