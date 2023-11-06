@@ -1,0 +1,10 @@
+sequenceDiagram
+  participant client
+  participant server
+
+  note right to client: user inputs text in HTML form and clicks on save.
+
+  client-->>client: renders page with the new note.
+  client-->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa 
+  server-->>client: {"message":"note created"}
+  
